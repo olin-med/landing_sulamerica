@@ -239,7 +239,8 @@ function App() {
             </div>
 
             {/* Full‑height image */}
-            <div className="w-full lg:w-1/2 h-auto lg:h-full flex justify-center">
+            {/* inside your existing flex */}
+            <div className="w-full lg:w-1/2 h-[350px] flex justify-center">
               <img
                 src="/running.avif"
                 alt="Detalhes dos produtos"

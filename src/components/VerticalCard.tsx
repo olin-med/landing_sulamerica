@@ -2,9 +2,7 @@
 import React, { useState } from "react";
 
 type VerticalCardProps = {
-  /** The header/title of the card */
   title: string;
-  /** The hidden content to reveal when open */
   children: React.ReactNode;
 };
 
@@ -12,25 +10,27 @@ const VerticalCard: React.FC<VerticalCardProps> = ({ title, children }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white border border-gray-200 rounded overflow-hidden shadow-sm">
-      {/* Header / toggle button */}
+    <div className="bg-white rounded overflow-hidden shadow-sm">
+      {/* Header */}
       <button
         type="button"
-        className={`w-full text-left px-4 py-3 font-medium cursor-pointer focus:outline-none ${
-          open ? "bg-gray-100" : "bg-white"
-        }`}
+        className="w-full text-left font-bold px-4 py-3 font-medium bg-[#white] cursor-pointer focus:outline-none"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
       >
         {title}
       </button>
 
-      {/* Content panel */}
-      {open && (
-        <div className="p-4 bg-white border-t border-gray-200">
-          {children}
-        </div>
-      )}
+      {/* Animated Panel */}
+      <div
+        className={`
+          overflow-hidden
+          transition-all duration-300 ease-in-out
+          ${open ? "max-h-96 opacity-100 p-4 border-t border-gray-200" : "max-h-0 opacity-0 p-0"}
+        `}
+      >
+        {children}
+      </div>
     </div>
   );
 };
