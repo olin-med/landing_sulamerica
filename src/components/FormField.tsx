@@ -30,8 +30,8 @@ const FormField: React.FC<InputProps> = ({
 
   return (
     <form className={className} onSubmit={onSubmit}>
-      <div className="mb-4 bg-gray-200 p-6 space-y-4 rounded">
-        <h2 className="text-2xl font-bold mb-4">Solicite sua Cotação</h2>
+      <div className="mb-4 bg-gray-100 p-6 space-y-4 rounded">
+        <h2 className="text-2xl text-[#0e2c70] font-bold mb-4">Solicite sua Cotação</h2>
 
         {/* Name */}
         <input
@@ -99,8 +99,9 @@ const FormField: React.FC<InputProps> = ({
             mt-2
             bg-[#e1763a]
             hover:bg-orange-500
+            hover:scale-[1.01]
             transition
-            duration-500
+            duration-300
             text-white
             font-medium
             rounded-md

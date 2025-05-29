@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-200 p-4">
+    <nav className="bg-gray-100 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <img src="/sulamerica_logo.png" alt="Logo" className="w-30" />
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-gray-200 border-t border-gray-300">
+        <div className="md:hidden bg-gray-100 border-t border-gray-300">
           <div className="flex flex-col items-center py-4 space-y-4">
             <ClientButton link="https://www.portoseguro.com.br/porto-seguro-saude" />
             <PhoneButton />

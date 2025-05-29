@@ -10,11 +10,11 @@ const VerticalCard: React.FC<VerticalCardProps> = ({ title, children }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded overflow-hidden shadow-sm">
+    <div className="bg-white rounded hover:scale-[1.01] overflow-hidden shadow-sm">
       {/* Header */}
       <button
         type="button"
-        className="w-full text-left font-bold px-4 py-3 font-medium bg-[#white] cursor-pointer focus:outline-none"
+        className="w-full text-left font-bold px-4 py-3 bg-[#white] cursor-pointer focus:outline-none"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
       >
@@ -26,7 +26,7 @@ const VerticalCard: React.FC<VerticalCardProps> = ({ title, children }) => {
         className={`
           overflow-hidden
           transition-all duration-300 ease-in-out
-          ${open ? "max-h-96 opacity-100 p-4 border-t border-gray-200" : "max-h-0 opacity-0 p-0"}
+          ${open ? "max-h-96 opacity-100 p-4 border-t border-gray-100" : "max-h-0 opacity-0 p-0"}
         `}
       >
         {children}

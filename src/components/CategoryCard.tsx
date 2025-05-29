@@ -58,6 +58,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
           group flex items-center justify-center
           cursor-pointer w-[90%] mx-auto
           py-3 mt-2 mb-6
+          hover:scale-[1.01]
           bg-[#e1763a] hover:bg-orange-500
           transition-colors duration-500
           text-white font-medium rounded-md
@@ -80,7 +81,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             "
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/1000/svg"
               className="w-6 h-6 inline-block stroke-current"
               fill="none"
               strokeWidth="3"

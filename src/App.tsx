@@ -11,44 +11,49 @@ import familyBg from "/familia_sofa1.avif"
 
 const PRODUCT_CARDS = [
   {
-    title: "Linha Pro",
+    title: "SulAmérica Saúde PME (03 a 29 pessoas)",
     content: (
       <p className="text-gray-700">
-        A Linha Pro oferece cobertura básica, ideal para quem quer segurança
-        a um preço acessível. Rede credenciada em todo o país com serviços
-        essenciais de ambulatório e internação.
+        Valorize o bem-estar dos seus funcionários e aumente a produtividade da sua empresa. 
+        Com o SulAmérica Saúde PME, você oferece cobertura completa, rede nacional 
+        de qualidade e serviços que cuidam da saúde física e emocional da sua equipe.
       </p>
     ),
   },
   {
-    title: "Linha Porto Saúde",
+    title: "SulAmérica Saúde PME Mais (30 a 99 pessoas)",
     content: (
       <p className="text-gray-700">
-        Com a Linha Porto Saúde você tem um plus em atendimento — coberturas
-        ampliadas, exames especiais e reembolso parcial. Rede com hospitais
-        e clínicas premium.
+        Para empresas que querem ir além no cuidado com seus colaboradores. 
+        O SulAmérica Saúde PME Mais oferece planos personalizados, maior flexibilidade 
+        de escolha e benefícios que valorizam quem faz seu negócio crescer.
       </p>
     ),
   },
   {
-    title: "Linha Tradicional",
+    title: "SulAmérica Saúde Empresarial (a partir de 100 pessoas)",
     content: (
       <p className="text-gray-700">
-        A Linha Tradicional abrange planos com atendimento altamente qualificado,
-        reembolso no Brasil e exterior, e escolhas ilimitadas de prestadores.
+        Grandes empresas precisam de grandes soluções. 
+        O SulAmérica Saúde Empresarial garante ampla cobertura, 
+        opções de reembolso e acesso aos melhores hospitais e profissionais, 
+        reforçando o compromisso da sua empresa com a saúde e o bem-estar.
       </p>
     ),
   },
   {
-    title: "Linha Porto Bairros",
+    title: "SulAmérica Saúde Adesão",
     content: (
       <p className="text-gray-700">
-        A Linha Porto Bairros traz planos com abrangência municipal, preço que
-        cabe no bolso e hospital/laboratório perto de você.
+        Para profissionais associados a entidades de classe, 
+        o SulAmérica Saúde Adesão oferece planos coletivos 
+        com excelente custo-benefício. Conte com a qualidade SulAmérica 
+        e tenha acesso a uma rede premium de atendimento médico.
       </p>
     ),
   },
-]
+];
+
 
 function App() {
   return (
@@ -72,20 +77,20 @@ function App() {
       >
         <div
           className="
-            text-white
+            text-[#e1763a]
             text-3xl md:text-4xl lg:text-6xl
             font-bold
             text-center lg:text-right
             leading-tight
           "
         >
-          <p className="text-[#e1763a]">Sulamerica,</p>
+          <p className="text-[#0e2c70]">SulAmérica,</p>
           Execência e preço justo
           <p
             className="
               mt-4
               text-base md:text-lg lg:text-2xl
-              font-normal
+              font-normal text-white
               opacity-80
               text-center lg:text-right
             "
@@ -111,7 +116,7 @@ function App() {
       <PageContainer
         id="benefits"
         className="
-          bg-gray-200
+          bg-gray-100
           py-16 px-4 sm:px-6 lg:px-8
           flex flex-col lg:flex-row
           items-center justify-center
@@ -119,15 +124,15 @@ function App() {
           gap-y-4 lg:gap-x-40
         "
       >
-        <div className="ext-base md:text-lg lg:text-xl lg:text-right">
+        <div className="text-base text-[#0e2c70] md:text-lg lg:text-xl lg:text-right">
           Quer Marcar Consultas ou dúvidas sobre seu plano atual? <br className="hidden lg:block" />
           Já é Cliente?
         </div>
         <Button
           id="submit"
           type="submit"
-          className="mt-4 lg:mt-0 cursor-pointer"
-          link="https://www.portoseguro.com.br/porto-seguro-saude"
+          className="mt-4 lg:mt-0 cursor-pointer hover:scale-[1.01]"
+          link="https://saude.sulamericaseguros.com.br/empresa/login/"
         >
           Visite a Central de Clientes
         </Button>
@@ -142,7 +147,7 @@ function App() {
           flex flex-col lg:flex-row
           items-center justify-center
           text-center lg:text-left
-          gap-y-8 lg:gap-x-40
+          gap-y-8 lg:gap-x-20
         "
       >
         <img
@@ -150,9 +155,9 @@ function App() {
           alt="consulta"
           className="h-56 sm:h-64 lg:h-80 mx-auto lg:mx-0 rounded"
         />
-        <div className="text-white space-y-2 ext-base md:text-lg lg:text-xl">
-          <div>Não é Cliente?</div>
-          <div>Quer saber mais sobre nossos planos?</div>
+        <div className="text-white space-y-2 text-base md:text-lg lg:text-xl">
+          <div className="font-bold">Por Que Escolher a SulAmérica?</div>
+          <div>Com mais de 120 anos de experiência, a SulAmérica oferece planos de saúde que unem tradição, tecnologia e cuidado humano. Somos reconhecidos pela qualidade no atendimento e pela confiança de milhões de brasileiros.</div>
         </div>
       </PageContainer>
 
@@ -160,19 +165,19 @@ function App() {
       <PageContainer
         id="categories"
         className="
-          bg-gray-200
+          bg-gray-100
           py-16 px-4 sm:px-6 lg:px-8
           flex flex-col
           items-center
         "
       >
         {/* Section title */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl text-[#0e2c70] font-bold mb-8">
           Nossas Categorias de Planos
         </h2>
 
         {/* Cards grid */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 text-[#0e2c70] lg:grid-cols-4 gap-6 lg:gap-8">
           <CategoryCard id="category1" title="SulAmérica Saúde PME (03 a 29 pessoas)" imageUrl="/familia1.avif">
             <p>O bem-estar dos funcionários é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
           </CategoryCard>
@@ -196,8 +201,8 @@ function App() {
       <PageContainer
         id="products"
         className="
-          bg-[# b4441c]
-          py-16 px-4 sm:px-6 lg:px-8
+          bg-[#b4441c]
+          py-16 px-4 sm:px-6 lg:px-8 
           /* remove flex here so children stack by default */
         "
       >
@@ -208,7 +213,7 @@ function App() {
             className="
               text-center lg:text-left
               text-2xl md:text-3xl lg:text-4xl
-              text-white font-bold
+              text-[#0e2c70] font-bold
             "
           >
             Conheça os Nossos Produtos
@@ -223,7 +228,7 @@ function App() {
             "
           >
             {/* Accordion cards */}
-            <div className="w-full lg:w-1/2 grid grid-cols-1 gap-6">
+            <div className="w-full lg:w-1/2 text-[#0e2c70] grid grid-cols-1 gap-6">
               {PRODUCT_CARDS.map(({ title, content }) => (
                 <VerticalCard key={title} title={title}>
                   {content}
@@ -235,7 +240,7 @@ function App() {
             {/* inside your existing flex */}
             <div className="w-full lg:w-1/2 h-[350px] flex justify-center">
               <img
-                src="/running.avif"
+                src="/familia3.avif"
                 alt="Detalhes dos produtos"
                 className="h-full w-auto object-cover shadow-lg rounded"
               />
