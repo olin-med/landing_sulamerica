@@ -178,7 +178,7 @@ function App() {
 
         {/* Cards grid */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 text-[#0e2c70] lg:grid-cols-4 gap-6 lg:gap-8">
-          <CategoryCard id="category1" title="SulAmérica Saúde PME (03 a 29 pessoas)" imageUrl="/familia1.avif">
+          <CategoryCard id="category1" title="SulAmérica Saúde PME (03 a 29 pessoas)" imageUrl="/micro_empresa.avif">
             <p>O bem-estar dos funcionários é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
           </CategoryCard>
           <CategoryCard id="category2" title="SulAmérica Saúde PME Mais (30 a 99 pessoas)" imageUrl="/corporate.avif">
@@ -186,10 +186,10 @@ function App() {
             
           </CategoryCard>
           <CategoryCard id="category3" title="SulAmérica Saúde Empresarial (a partir de 100 pessoas)
-          " imageUrl="/health1.avif">
+          " imageUrl="/big_company.avif">
             <p>O bem-estar dos funcionários é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
           </CategoryCard>
-          <CategoryCard id="category4" title="SulAmérica Saúde Adesão" imageUrl="/health2.avif">
+          <CategoryCard id="category4" title="SulAmérica Saúde Adesão" imageUrl="/health1.avif">
             <p>O seguro saúde coletivo por adesão é oferecido pela SulAmérica para ser comercializado por Administradoras de Benefícios à entidades de caráter profissional, classista ou setorial. Para ter direito a contratar um plano coletivo por adesão, o beneficiário precisa ser associado à uma entidade.
           </p>
             
