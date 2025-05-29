@@ -173,28 +173,21 @@ function App() {
 
         {/* Cards grid */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          <CategoryCard id="category1" title="Linha Pro" imageUrl="/familia1.avif">
-            <p>- Empresas de 3 a 499 vidas;</p>
-            <p>- Abrangência regional;</p>
-            <p>- Custo-benefício.</p>
+          <CategoryCard id="category1" title="SulAmérica Saúde PME (03 a 29 pessoas)" imageUrl="/familia1.avif">
+            <p>O bem-estar dos funcionários é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
           </CategoryCard>
-          <CategoryCard id="category2" title="Linha Porto Saúde" imageUrl="/corporate.avif">
-            <p>- Pequenas, médias e grandes empresas;</p>
-            <p>- Abrangência nacional;</p>
-            <p>- Rede otimizada;</p>
-            <p>- Reembolso.</p>
+          <CategoryCard id="category2" title="SulAmérica Saúde PME Mais (30 a 99 pessoas)" imageUrl="/corporate.avif">
+            <p>O bem-estar dos colaboradores é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
+            
           </CategoryCard>
-          <CategoryCard id="category3" title="Linha Tradicional" imageUrl="/health1.avif">
-            <p>- Para pequenas e médias empresas;</p>
-            <p>- Abrangência nacional;</p>
-            <p>- Ampla rede referenciada;</p>
-            <p>- Reembolso.</p>
+          <CategoryCard id="category3" title="SulAmérica Saúde Empresarial (a partir de 100 pessoas)
+          " imageUrl="/health1.avif">
+            <p>O bem-estar dos funcionários é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
           </CategoryCard>
-          <CategoryCard id="category4" title="Linha Porto Bairros" imageUrl="/health2.avif">
-            <p>- Empresas de 3 a 99 vidas;</p>
-            <p>- Abrangência municipal;</p>
-            <p>- Hospital e laboratório no seu bairro;</p>
-            <p>- Preço que cabe no bolso.</p>
+          <CategoryCard id="category4" title="SulAmérica Saúde Adesão" imageUrl="/health2.avif">
+            <p>O seguro saúde coletivo por adesão é oferecido pela SulAmérica para ser comercializado por Administradoras de Benefícios à entidades de caráter profissional, classista ou setorial. Para ter direito a contratar um plano coletivo por adesão, o beneficiário precisa ser associado à uma entidade.
+          </p>
+            
           </CategoryCard>
         </div>
       </PageContainer>
@@ -203,7 +196,7 @@ function App() {
       <PageContainer
         id="products"
         className="
-          bg-[#b4441c]
+          bg-[# b4441c]
           py-16 px-4 sm:px-6 lg:px-8
           /* remove flex here so children stack by default */
         "
