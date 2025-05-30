@@ -83,10 +83,10 @@ const FormField: React.FC<InputProps> = ({
           <option value="" disabled>
             Selecione seu plano
           </option>
-          <option value="basic">Linha Pro</option>
-          <option value="premium">Linha Porto Saúde</option>
-          <option value="family">Linha Tradicional</option>
-          <option value="business">Linha Porto Bairros</option>
+          <option value="basic">SulAmérica Saúde PME</option>
+          <option value="mais">SulAmérica Saúde PME Mais</option>
+          <option value="business">SulAmérica Saúde Empresarial</option>
+          <option value="adesao">SulAmérica Saúde Adesão</option>
         </select>
 
         {/* Submit Button */}

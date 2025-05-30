@@ -107,7 +107,7 @@ function App() {
             md:w-1/2
             lg:w-1/4
           "
-          name="name"
+          name="name" 
           value=""
         />
       </PageContainer>
