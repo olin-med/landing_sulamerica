@@ -9,7 +9,6 @@ import VerticalCard from "./components/VerticalCard"
 import MobileWhatsAppFloating from "./components/MobileWhatsAppFloating"
 import Footer from "./components/Footer"
 import familyBg from "/familia_sofa1.avif"
-import { Form } from "react-router-dom"
 
 const PRODUCT_CARDS = [
   {
