@@ -3,11 +3,13 @@ import PageContainer from "./components/PageContainer"
 import FormField from "./components/FormField"
 import NavBar from "./components/NavBar"
 import Button from "./components/LinkButton"
+import FormButton from "./components/FormButton"
 import CategoryCard from "./components/CategoryCard"
 import VerticalCard from "./components/VerticalCard"
 import MobileWhatsAppFloating from "./components/MobileWhatsAppFloating"
 import Footer from "./components/Footer"
 import familyBg from "/familia_sofa1.avif"
+import { Form } from "react-router-dom"
 
 const PRODUCT_CARDS = [
   {
@@ -59,15 +61,52 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
+      {/* ─── MOBILE: header over background, form below ─── */}
+      <section className="block lg:hidden">
+        <div
+          className="w-full py-16 px-4 flex items-center min-h-[450px] relative justify-center"
+          style={{
+            backgroundImage: `url(${familyBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div
+            className="
+              text-[#e1763a]
+              text-3xl md:text-4xl
+              font-bold
+              text-center
+              leading-tight
+            "
+          >
+            SulAmérica, <br />
+            Execência e preço justo
+            <p
+              className="
+                mt-4
+                text-base md:text-lg
+                font-normal
+                opacity-80
+                text-white
+              "
+            >
+              Seu caminho para proteção completa
+            </p>
+          </div>
+        </div>
 
-      {/* HOME */}
+      </section>
+
+      {/* ─── DESKTOP: one container, background + side-by-side ─── */}
       <PageContainer
         id="home"
         className="
+          hidden lg:flex
           py-16 px-4
-          flex flex-col lg:flex-row
+          flex-row
           justify-center items-center
-          gap-y-8 lg:gap-x-20
+          gap-x-20
         "
         style={{
           backgroundImage: `url(${familyBg})`,
@@ -84,14 +123,15 @@ function App() {
             leading-tight
           "
         >
-          <p className="text-[#0e2c70]">SulAmérica,</p>
-          Execência e preço justo
+          SulAmérica, <br />
+          Experiência e preço justo
           <p
             className="
               mt-4
               text-base md:text-lg lg:text-2xl
-              font-normal text-white
+              font-normal
               opacity-80
+              text-white
               text-center lg:text-right
             "
           >
@@ -107,9 +147,33 @@ function App() {
             md:w-1/2
             lg:w-1/4
           "
-          name="name" 
+          name="name"
           value=""
         />
+      </PageContainer>
+
+      {/* BENEFITS */}
+      <PageContainer
+        id="benefits"
+        className="
+          bg-[#e1763a]
+          text-white
+          py-16 px-4 sm:px-6 lg:px-8
+          flex flex-col lg:flex-row
+          items-center justify-center
+          text-center lg:text-left
+          gap-y-4 lg:gap-x-40
+        "
+      >
+        <div className="text-base  md:text-lg lg:text-xl lg:text-right">
+          Venha para a SulAmérica!
+        </div>
+        <FormButton
+          className="mt-4 lg:mt-0 cursor-pointer bg-gray-100 text-[#e1763a] hover:bg-[#e1763a] hover:text-white"
+          mobileScrollTargetId="home2"
+          desktopScrollTargetId="home">
+          Solicite uma Cotação
+        </FormButton>
       </PageContainer>
 
       {/* BENEFITS */}
@@ -131,7 +195,7 @@ function App() {
         <Button
           id="submit"
           type="submit"
-          className="mt-4 lg:mt-0 cursor-pointer hover:scale-[1.01]"
+          className="mt-4 lg:mt-0 cursor-pointer hover:scale-[1.01] bg-[#e1763a] text-white hover:bg-orange-500"
           link="https://saude.sulamericaseguros.com.br/empresa/login/"
         >
           Visite a Central de Clientes
@@ -158,6 +222,12 @@ function App() {
         <div className="text-white space-y-2 text-base md:text-lg lg:text-xl">
           <div className="font-bold">Por Que Escolher a SulAmérica?</div>
           <div>Com mais de 120 anos de experiência, a SulAmérica oferece planos de saúde que unem tradição, tecnologia e cuidado humano. Somos reconhecidos pela qualidade no atendimento e pela confiança de milhões de brasileiros.</div>
+          <FormButton
+            className="mt-4 lg:mt-0 cursor-pointer bg-gray-100 text-[#e1763a] hover:bg-[#e1763a] hover:text-white"
+            mobileScrollTargetId="home2"
+            desktopScrollTargetId="home">
+            Solicitar Cotação
+          </FormButton>
         </div>
       </PageContainer>
 
@@ -178,18 +248,18 @@ function App() {
 
         {/* Cards grid */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 text-[#0e2c70] lg:grid-cols-4 gap-6 lg:gap-8">
-          <CategoryCard id="category1" title="SulAmérica Saúde PME (03 a 29 pessoas)" imageUrl="/micro_empresa.avif">
+          <CategoryCard id="category1" mobileScrollTargetId="home2" desktopScrollTargetId="home" title="SulAmérica Saúde PME (03 a 29 pessoas)" imageUrl="/micro_empresa.avif">
             <p>O bem-estar dos funcionários é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
           </CategoryCard>
-          <CategoryCard id="category2" title="SulAmérica Saúde PME Mais (30 a 99 pessoas)" imageUrl="/corporate.avif">
+          <CategoryCard id="category2" mobileScrollTargetId="home2" desktopScrollTargetId="home" title="SulAmérica Saúde PME Mais (30 a 99 pessoas)" imageUrl="/corporate.avif">
             <p>O bem-estar dos colaboradores é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
             
           </CategoryCard>
-          <CategoryCard id="category3" title="SulAmérica Saúde Empresarial (a partir de 100 pessoas)
+          <CategoryCard id="category3" mobileScrollTargetId="home2" desktopScrollTargetId="home" title="SulAmérica Saúde Empresarial (a partir de 100 pessoas)
           " imageUrl="/big_company.avif">
             <p>O bem-estar dos funcionários é fundamental para o sucesso da sua empresa. Por isso, conte com SulAmérica Saúde na hora de oferecer assistência e proteção.</p>
           </CategoryCard>
-          <CategoryCard id="category4" title="SulAmérica Saúde Adesão" imageUrl="/health1.avif">
+          <CategoryCard id="category4" mobileScrollTargetId="home2" desktopScrollTargetId="home" title="SulAmérica Saúde Adesão" imageUrl="/health1.avif">
             <p>O seguro saúde coletivo por adesão é oferecido pela SulAmérica para ser comercializado por Administradoras de Benefícios à entidades de caráter profissional, classista ou setorial. Para ter direito a contratar um plano coletivo por adesão, o beneficiário precisa ser associado à uma entidade.
           </p>
             
@@ -246,6 +316,24 @@ function App() {
               />
             </div>
           </div>
+        </div>
+      </PageContainer>
+      <PageContainer
+        id="home2"
+        className="block lg:hidden bg-gray-100"
+      >
+        <div className="px-4 pb-16">
+          <FormField
+            id="name"
+            name="name"
+            value=""
+            className="
+              w-full
+              sm:w-3/4
+              md:w-1/2
+              mx-auto
+            "
+          />
         </div>
       </PageContainer>
       <div className="flex flex-col">

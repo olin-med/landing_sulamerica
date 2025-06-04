@@ -7,6 +7,8 @@ type CategoryCardProps = {
   title: string;
   imageUrl: string;
   children?: React.ReactNode;
+  mobileScrollTargetId: string;
+  desktopScrollTargetId: string;
 };
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
@@ -15,9 +17,18 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   title,
   imageUrl,
   children,
+  mobileScrollTargetId,
+  desktopScrollTargetId,
+  
 }) => {
-  const scrollToHome = () => {
-    const el = document.getElementById("home");
+  const scrollToSection = () => {
+    // Tailwind's `lg:` breakpoint is 1024px
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    const targetId = isDesktop
+      ? desktopScrollTargetId
+      : mobileScrollTargetId;
+
+    const el = document.getElementById(targetId);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
   return (
@@ -53,7 +64,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
       {/* Submit Button */}
       <button
         type="button"
-        onClick={scrollToHome}
+        onClick={scrollToSection}
         className="
           group flex items-center justify-center
           cursor-pointer w-[90%] mx-auto
