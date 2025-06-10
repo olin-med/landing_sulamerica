@@ -14,44 +14,69 @@ const PRODUCT_CARDS = [
   {
     title: "Direto Nacional",
     content: (
-      <p className="text-gray-700">
+      <span className="text-gray-700">
         Linha de custo-benefício, com cobertura em todo o território nacional. Ideal para empresas que buscam segurança e economia. <br />
-        <strong>Obs:</strong> Todas as linhas podem ser cotadas com no mínimo 3 vidas.
-      </p>
+        <strong>Obs:</strong> Todas as linhas podem ser cotadas com no mínimo 3 vidas.<br />
+        <ul>
+          Cobertura:
+          <li>- Hospital Leforte</li>
+          <li>- Hospital Villa Lobos</li>
+          <li>- Hospital Nipo-Brasileiro</li>
+        </ul>
+      </span>
     ),
   },
   {
     title: "Clássico",
     content: (
-      <p className="text-gray-700">
+      <span className="text-gray-700">
         Padrão médio, com acesso a alguns hospitais de primeira linha e rede nacional de excelência. Garantia de atendimento completo para sua equipe. <br />
         <strong>Obs:</strong> Todas as linhas são nacionais.
-      </p>
+        <ul>
+          Cobertura:
+          <li>- Hospital Santa Catarina</li>
+          <li>- Hospital São Camilo</li>
+        </ul>
+      </span>
     ),
   },
   {
     title: "Especial",
     content: (
-      <p className="text-gray-700">
+      <span className="text-gray-700">
         Alto padrão, com ampla rede de hospitais e clínicas de referência em todo o país. Benefícios adicionais para maior conforto e qualidade no atendimento. <br />
         <strong>Obs:</strong> Todas as linhas podem ser cotadas com no mínimo 3 vidas.
-      </p>
+        <ul>
+          Cobertura:
+          <li>- Rede Dor</li>
+          <li>- Hospital Oswaldo Cruz Paulista</li>
+          <li>- Hospital Samaritano</li>
+          <li>- Hospital Nove de julho</li>
+          <li>- Hospital Infantil Sabará</li>
+        </ul>
+      </span>
     ),
   },
   {
     title: "Executivo",
     content: (
-      <p className="text-gray-700">
-        Top dos tops, com rede premium e hospitais de primeira linha em nível nacional. Serviços exclusivos para empresas exigentes. <br />
+      <span className="text-gray-700">
+        Rede premium e hospitais de primeira linha em nível nacional. Serviços exclusivos para empresas exigentes. <br />
         <strong>Obs:</strong> Todas as linhas são nacionais.
-      </p>
+        <ul>
+          Cobertura:
+          <li>- Hospital Sírio Libanês</li>
+          <li>- Hospital Albert Einstein </li>
+          <li>- Laboratórios Alta e Fleury</li>
+        </ul>
+      </span>
     ),
   },
   {
     title: "Prestígio",
     content: (
       <p className="text-gray-700">
-        Top dos tops com reembolso diferenciado, cobertura nacional completa e acesso aos melhores hospitais do Brasil. Ideal para quem não abre mão de total liberdade de escolha. <br />
+        Melhor dos melhores com reembolso diferenciado, cobertura nacional completa e acesso aos melhores hospitais do Brasil. Ideal para quem não abre mão de total liberdade de escolha. <br />
         <strong>Obs:</strong> Todas as linhas podem ser cotadas com no mínimo 3 vidas.
       </p>
     ),
